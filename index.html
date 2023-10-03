@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time management</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    center: 'dayGridMonth,timeGridWeek,timeGridDay',
+                }
+            });
+        calendar.render();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Time management</h1>
+    </header>
+    <main>
+        <div id='calendar'></div>
+
+        <section id="task-form">
+            <input type="text" id="task-input" placeholder="Add task">
+            <button id="add-task">Add</button>
+        </section>
+        <section id="tasks">
+
+        </section>
+
+    </main>
+</body>
+</html>

@@ -8,18 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                headerToolbar: {
-                    center: 'dayGridMonth,timeGridWeek,timeGridDay',
-                }
-            });
-        calendar.render();
-        });
-    </script>
+    
 </head>
 <body>
     <header>
@@ -29,6 +18,7 @@
         <div id='calendar'></div>
 
         <section id="task-form">
+            <input type="date" id="task-date">
             <input type="text" id="task-input" placeholder="Add task">
             <button id="add-task">Add</button>
         </section>

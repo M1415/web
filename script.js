@@ -41,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const taskDate = taskDateInput.valueAsDate;
     
         if (taskText !== '' && taskDate) {
+            calendar.addEvent({
+                title: taskText,
+                start: taskDate,
+            });
+            
             const taskElement = createTaskElement(taskText, taskDate);
 
             const index = findIndex(taskDate);
